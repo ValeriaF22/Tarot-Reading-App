@@ -13,5 +13,6 @@ This is used to show how to run a streamlit app locally through google colab.
 ## Kaggle
 Simple functions are developed 
 
-You can check the web app here:
+
+### You can check the web app here:
 https://valeriaf22-tarot-reading-app-tarot-reading-app-68c8tr.streamlitapp.com/ 
