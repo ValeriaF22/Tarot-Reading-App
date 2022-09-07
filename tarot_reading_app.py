@@ -39,7 +39,7 @@ def load_data(filename):
 data=load_data('./data/tarot-images.json')
 df = pd.json_normalize(data['cards'])
 
-st.write(df)
+#st.write(df)
 
 df['fortune_telling_1'] = df['fortune_telling'].str[0]
 df['fortune_telling_2'] = df['fortune_telling'].str[1]
