@@ -15,4 +15,4 @@ Simple functions are developed
 
 
 ### You can check the web app here:
-https://valeriaf22-tarot-reading-app-tarot-reading-app-68c8tr.streamlitapp.com/ 
+https://valeriaf22-tarot-reading-app-tarot-reading-app-28u8e3.streamlitapp.com/
