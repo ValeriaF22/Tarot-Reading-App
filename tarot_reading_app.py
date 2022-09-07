@@ -41,70 +41,70 @@ df = pd.json_normalize(data['cards'])
 
 st.write(df)
 
-# df['fortune_telling_1'] = df['fortune_telling'].str[0]
-# df['fortune_telling_2'] = df['fortune_telling'].str[1]
-# df['fortune_telling_3'] = df['fortune_telling'].str[2]
-# df = df.fillna('')
+df['fortune_telling_1'] = df['fortune_telling'].str[0]
+df['fortune_telling_2'] = df['fortune_telling'].str[1]
+df['fortune_telling_3'] = df['fortune_telling'].str[2]
+df = df.fillna('')
 
-# if st.button("Reading"):  
+if st.button("Reading"):  
 
-# 		reading = df.sample(n = 3).reset_index(drop=True)  
+		reading = df.sample(n = 3).reset_index(drop=True)  
 		
-# 		today = datetime.date.today()
-# 		date = today.strftime("%d-%B-%Y")
+		today = datetime.date.today()
+		date = today.strftime("%d-%B-%Y")
 				
-# 		# identify images
-# 		name_img_past = reading['img'].iloc[0]
-# 		name_img_present = reading['img'].iloc[1]
-# 		name_img_future = reading['img'].iloc[2]
+		# identify images
+		name_img_past = reading['img'].iloc[0]
+		name_img_present = reading['img'].iloc[1]
+		name_img_future = reading['img'].iloc[2]
 
-# 		# open images
-# 		img_past = PIL.Image.open(f'../data/{name_img_past}')
-# 		img_present = PIL.Image.open(f'../data/{name_img_present}')
-# 		img_future = PIL.Image.open(f'../data/{name_img_future}')
+		# open images
+		img_past = PIL.Image.open(f'../data/{name_img_past}')
+		img_present = PIL.Image.open(f'../data/{name_img_present}')
+		img_future = PIL.Image.open(f'../data/{name_img_future}')
 
-# 		# plot images
-# 		fig, (past, present, future) = plt.subplots(1, 3, figsize=(5, 3))
-# 		fig.suptitle('Your reading: Past, Present, Future on {}'.format(date), fontsize=10)
-# 		past.imshow(img_past)
-# 		past.axis('off')
-# 		past.set_title(reading['name'].iloc[0], fontsize=7)
-# 		present.imshow(img_present)
-# 		present.axis('off')
-# 		present.set_title(reading['name'].iloc[1], fontsize=7)
-# 		future.imshow(img_future)
-# 		future.axis('off')
-# 		future.set_title(reading['name'].iloc[2], fontsize=7)
-# 		plt.show()
-# 		st.pyplot(fig)
+		# plot images
+		fig, (past, present, future) = plt.subplots(1, 3, figsize=(5, 3))
+		fig.suptitle('Your reading: Past, Present, Future on {}'.format(date), fontsize=10)
+		past.imshow(img_past)
+		past.axis('off')
+		past.set_title(reading['name'].iloc[0], fontsize=7)
+		present.imshow(img_present)
+		present.axis('off')
+		present.set_title(reading['name'].iloc[1], fontsize=7)
+		future.imshow(img_future)
+		future.axis('off')
+		future.set_title(reading['name'].iloc[2], fontsize=7)
+		plt.show()
+		st.pyplot(fig)
 		
-# 		# Outcomes
-# 		st.text('My dearest, your fortune reading is about your past, present and future.')
-# 		st.text('')
-# 		st.subheader('Regarding your past : ')
-# 		st.text(reading['fortune_telling_1'].iloc[0])
-# 		st.text(reading['fortune_telling_2'].iloc[0])
-# 		st.text(reading['fortune_telling_3'].iloc[0])
-# 		st.text('')
-# 		st.subheader('Regarding your present: ')
-# 		st.text(reading['fortune_telling_1'].iloc[1])
-# 		st.text(reading['fortune_telling_2'].iloc[1])
-# 		st.text(reading['fortune_telling_3'].iloc[1])
-# 		st.text('')
-# 		st.subheader('Regarding your future: ')
-# 		st.text(reading['fortune_telling_1'].iloc[2])
-# 		st.text(reading['fortune_telling_2'].iloc[2])
-# 		st.text(reading['fortune_telling_3'].iloc[2])
+		# Outcomes
+		st.text('My dearest, your fortune reading is about your past, present and future.')
+		st.text('')
+		st.subheader('Regarding your past : ')
+		st.text(reading['fortune_telling_1'].iloc[0])
+		st.text(reading['fortune_telling_2'].iloc[0])
+		st.text(reading['fortune_telling_3'].iloc[0])
+		st.text('')
+		st.subheader('Regarding your present: ')
+		st.text(reading['fortune_telling_1'].iloc[1])
+		st.text(reading['fortune_telling_2'].iloc[1])
+		st.text(reading['fortune_telling_3'].iloc[1])
+		st.text('')
+		st.subheader('Regarding your future: ')
+		st.text(reading['fortune_telling_1'].iloc[2])
+		st.text(reading['fortune_telling_2'].iloc[2])
+		st.text(reading['fortune_telling_3'].iloc[2])
 
-# st.sidebar.subheader("About App")
+st.sidebar.subheader("About App")
 
-# st.sidebar.info("This web app makes a tarot reading about your past, present and future.")
-# st.sidebar.info("Click on the 'Reading' button to make a reading.")
-# st.sidebar.info("Hoped you had fun.")
-# st.sidebar.info("Don't forget to rate this app")
+st.sidebar.info("This web app makes a tarot reading about your past, present and future.")
+st.sidebar.info("Click on the 'Reading' button to make a reading.")
+st.sidebar.info("Hoped you had fun.")
+st.sidebar.info("Don't forget to rate this app")
 
-# feedback = st.sidebar.slider('How much would you rate this app?',min_value=0,max_value=5,step=1)
+feedback = st.sidebar.slider('How much would you rate this app?',min_value=0,max_value=5,step=1)
 
-# if feedback:
-#   st.header("Thank you for rating the app!")
-#   st.info("Caution: This is just a prediction and not doctoral advice. Kindly see a doctor if you feel the symptoms persist.")
+if feedback:
+  st.header("Thank you for rating the app!")
+  st.info("Caution: This is just a prediction and not doctoral advice. Kindly see a doctor if you feel the symptoms persist.")
