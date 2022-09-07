@@ -98,9 +98,9 @@ if st.button("Get a Reading"):
 
 st.sidebar.subheader("About App")
 
-st.sidebar.info("This web app makes a tarot reading about your past, present and future.")
-st.sidebar.info("Click on the 'Reading' button to make a reading.")
-st.sidebar.info("Hoped you had fun.")
+st.sidebar.info("This web app generates a tarot reading of your past, present, and future.")
+st.sidebar.info("Click on the 'Get a Reading' button to generate a reading.")
+st.sidebar.info("Have fun!")
 st.sidebar.info("Don't forget to rate this app")
 
 feedback = st.sidebar.slider('How much would you rate this app?',min_value=0,max_value=5,step=1)
