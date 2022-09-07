@@ -46,7 +46,7 @@ df['fortune_telling_2'] = df['fortune_telling'].str[1]
 df['fortune_telling_3'] = df['fortune_telling'].str[2]
 df = df.fillna('')
 
-if st.button("Reading"):  
+if st.button("Get a Reading"):  
 
 		reading = df.sample(n = 3).reset_index(drop=True)  
 		
