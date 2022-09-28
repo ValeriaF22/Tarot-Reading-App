@@ -12,7 +12,12 @@
 
 ## Technologies
 Project is created with:
-*
+* matplotlib
+* numpy
+* pandas
+* Pillow
+* seaborn
+* streamlit
 
 ## Notebooks
 ### Google Colab
