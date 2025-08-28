@@ -4,7 +4,7 @@
 * [General Info](#general-info)
 * [Technologies](#technologies)
 * [Notebooks](#notebooks)
-* [Tarot Web Wpp](#tarot-app)
+* [Tarot Web App](#tarot-app)
 
 ## General info
 * This project uses a dataset from kaggle: [Tarot Dataset](https://www.kaggle.com/datasets/lsind18/tarot-json). 
